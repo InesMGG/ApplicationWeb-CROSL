@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS mdl2;
+CREATE DATABASE mdl2;
+USE mdl2;
+
 drop table if exists TRESORIER;
 drop table if exists LIGUE;
 drop table if exists PRESTATION;
@@ -30,7 +34,7 @@ Create Table PRESTATION
 	Pu FLOAT(4,3),
 	CONSTRAINT PK_PRES PRIMARY KEY (code)
 	)Engine=Innodb;
-	
+
 Create Table FACTURE
 	(
 	Numfacture VARCHAR(6),
@@ -47,6 +51,3 @@ Create Table LIGUE_FACTURE
 	Quantite FLOAT(5,2),
 	CONSTRAINT PK_LIGFACT PRIMARY KEY (numfacture, code_pres)
 	)Engine=Innodb;
-	
-	
-	
